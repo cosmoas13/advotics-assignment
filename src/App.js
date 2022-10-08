@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Header from './components/element/Header';
+import Marker from './components/element/MarkerInsight';
+import PeriodFilter from './components/element/PeriodFilter/component';
+import Sidebar from './components/element/Sidebar';
+import Dashboard from './components/layout/Dashboard/component';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <div className='dashboard-wrapper'>
+        <Sidebar />
+        <Dashboard>
+          <PeriodFilter />
+          <Marker />
+        </Dashboard>
+      </div>
+    </React.Fragment>
   );
 }
-
 export default App;
