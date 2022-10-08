@@ -1,13 +1,19 @@
 import React from 'react';
-import { ICONS } from '../../../configs';
+import { ICONS, MONTH } from '../../../configs';
 import { bestSeller } from '../../../constants/dummy';
 
-function CardSelling({ title }) {
+function CardSelling({ title, days }) {
   const compare = () => {
-    if (1) {
+    if (days === 1) {
       return 1;
-    } else if (2) {
+    } else if (days === 7) {
       return 2;
+    } else if (days === 30) {
+      return 3;
+    } else if (days < MONTH) {
+      return 4;
+    } else if (days > MONTH) {
+      return 5;
     }
   };
 
@@ -20,7 +26,7 @@ function CardSelling({ title }) {
       {bestSeller
         .sort((a, b) => b.price * b.sold - a.price * a.sold)
         .map((item, index) =>
-          item.id === 1 ? (
+          item.id === compare() ? (
             <div
               key={index}
               className={`card-bodys ${index === 0 && 'card-bodys__active'}`}

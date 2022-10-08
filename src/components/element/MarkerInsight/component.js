@@ -4,9 +4,8 @@ import Sales from '../Sales';
 import AverageChart from '../AverageChart';
 import CardSelling from '../CardSelling';
 
-function MarkerSight() {
+function MarkerSight({ days }) {
   const [status, setStatus] = useState(true);
-
   const handleChange = () => {
     setStatus(!status);
   };
@@ -30,8 +29,8 @@ function MarkerSight() {
           <Sales />
           <div className='wrapper-monitor'>
             <AverageChart />
-            <CardSelling title='BEST SELLING SKU' />
-            <CardSelling title='TOP COMPETITOR SKU' />
+            <CardSelling title='BEST SELLING SKU' days={days} />
+            <CardSelling title='TOP COMPETITOR SKU' days={days} />
           </div>
         </React.Fragment>
       )}

@@ -9,6 +9,7 @@ const icons = {
   DOT: require('../static/icon-more.svg'),
   SHOP: require('../static/icon-sales-over.svg'),
   ARROW: require('../static/icon-down-arrow.svg'),
+  CALENDAR: require('../static/icon-calendar2x.png'),
 };
 
 export default icons;

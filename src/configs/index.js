@@ -1,3 +1,4 @@
+import moment from 'moment';
 import images from './images';
 import icons from './icons';
 
@@ -12,3 +13,11 @@ export const getRandomValues = () => {
   }
   return array;
 };
+
+const day =
+  moment(moment().endOf('month')).diff(
+    moment(moment().startOf('month')),
+    'days'
+  ) + 1;
+
+export const MONTH = day;

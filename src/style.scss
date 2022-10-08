@@ -96,11 +96,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            cursor: pointer;
 
             .period-title {
                 font-size: 40px;
                 color: #707070C4;
                 font-weight: 600;
+            }
+
+            .period-filter:hover {
+                background-color: rgb(252, 252, 252);
             }
 
             .period-filter {
@@ -109,6 +114,41 @@
                 box-shadow: 0px 2px 3px #00000029;
                 border-radius: 2px;
                 background-color: #FFFFFF;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 6px;
+
+                .period-left {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 8px;
+                    img {
+                        width: 28px;
+                        height: 28px;
+                        margin-right: 8px;
+                    }
+                    div {
+                        font-size: 16px;
+                        color: #8B8B8B;
+                    }
+                }
+
+                .period-right {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 8px;
+                    .period-calendar {
+                        font-size: 16px;
+                        color: #6A6A6A;
+                    }
+
+                    img {
+                        width: 23px;
+                        height: 25px;
+                        margin-left: 10px;
+                        margin-top: 3px;
+                    }
+                }
             }
         }
 
@@ -299,7 +339,6 @@
                 .card-bodys {
                     display: flex;
                     align-items: center;
-                    width: 243px;
                     border: 0.5px solid #C5C5C59C;
                     border-radius: 4px;
                     margin: 6px 0;
@@ -375,3 +414,81 @@
         }
     }
 }
+
+// DATE RANGE PICKER CSS
+
+.react-bootstrap-daterangepicker-container{
+    display: block!important;
+}
+
+.daterangepicker .drp-buttons{
+    text-align: left;
+    line-height: 48px;
+}
+
+.daterangepicker .drp-buttons .btn{
+    line-height: 32px;
+    width: 100px;
+}
+
+.daterangepicker .ranges li{
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+    margin-left: 24px;
+    border-radius: 4px;
+}
+.daterangepicker .ranges li:first-child{
+    margin-top: 16px;
+}
+.daterangepicker .ranges li:last-child{
+    border-bottom: none;
+    margin-bottom: 16px;
+}
+
+.daterangepicker .ranges li.active{
+    background-color: #37B04C;
+}
+
+.daterangepicker td.in-range, .daterangepicker td.active, .daterangepicker td.active:hover,.daterangepicker td.available:hover {
+    background-color: #eef8eb;
+    color: #37B04C;
+    border-color: transparent;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.daterangepicker .ranges li:hover {
+    background-color: #289E45;
+    color: #fff;
+}
+.daterangepicker .drp-selected{
+    display: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #37B04C;
+    border-color: #37B04C;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #289E45;
+    border-color: #37B04C;
+}
+
+.btn-primary:disabled {
+    color: #37B04C;
+    background-color: #eef8eb;
+    border-color: #eef8eb;
+}
+
+@media (min-width: 564px) {
+    .daterangepicker .drp-calendar.left {
+      margin: 32px 0 32px 24px;
+    }
+
+    .daterangepicker .drp-calendar.right {
+        margin: 32px 0 32px;
+    }
+  }

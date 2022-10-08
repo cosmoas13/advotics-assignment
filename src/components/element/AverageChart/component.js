@@ -31,8 +31,6 @@ function AverageChart() {
     ]);
   };
 
-  console.log(values);
-
   return (
     <div className='chart-wrapper'>
       <div className='chart-header'>
