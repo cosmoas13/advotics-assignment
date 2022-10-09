@@ -7,6 +7,7 @@ import 'moment/min/locales';
 import { ICONS } from '../../../configs';
 
 function PeriodFilter({ handleChange }) {
+  // eslint-disable-next-line
   const [days, setDays] = useState(7);
   const [fromDate, setFromDate] = useState(moment().subtract(7, 'days'));
   const [toDate, setToDate] = useState(moment().subtract(1, 'days'));
@@ -58,24 +59,28 @@ function PeriodFilter({ handleChange }) {
       }}
       onEvent={handleChangePeriod}
     >
-      <div className='period-wrapper' onClick={handleClick}>
+      <div
+        className='period-wrapper'
+        onClick={handleClick}
+      >
         <div className='period-title'>Dashboard</div>
         <div className='period-filter'>
           <div className='period-left'>
-            <img src={ICONS.CALENDAR} alt='icon-calendar' />
+            <img
+              src={ICONS.CALENDAR}
+              alt='icon-calendar'
+            />
             <div>Period</div>
           </div>
           <div className='period-right'>
             <div className='period-calendar'>
-              {moment(fromDate)
-                .locale('id')
-                .format('LL')}{' '}
-              -{' '}
-              {moment(toDate)
-                .locale('id')
-                .format('LL')}
+              {moment(fromDate).locale('id').format('LL')} -{' '}
+              {moment(toDate).locale('id').format('LL')}
             </div>
-            <img src={status ? ICONS.DOWN : ICONS.UP} alt='icon-arrow' />
+            <img
+              src={status ? ICONS.DOWN : ICONS.UP}
+              alt='icon-arrow'
+            />
           </div>
         </div>
       </div>

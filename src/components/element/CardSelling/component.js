@@ -21,6 +21,7 @@ function CardSelling({ title, days }) {
   const sortingData = bestSeller.sort(
     (a, b) => b.price * b.sold - a.price * a.sold
   );
+  // eslint-disable-next-line
   sortingData.map((item) => {
     item.id === compare() && sortData.push(item);
   });

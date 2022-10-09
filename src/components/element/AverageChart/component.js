@@ -18,6 +18,7 @@ function AverageChart() {
     getRandomValues(),
   ]);
 
+  // eslint-disable-next-line
   const [selectedOption, setSelectedOption] = useState(options[0].value);
 
   const handleChange = (e) => {
@@ -41,7 +42,10 @@ function AverageChart() {
             defaultValue={options[0]}
             onChange={handleChange}
           />
-          <img src={ICONS.DOT} alt='icon-dot' />
+          <img
+            src={ICONS.DOT}
+            alt='icon-dot'
+          />
         </div>
       </div>
       <Chart
