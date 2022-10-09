@@ -27,7 +27,7 @@ function Sales({ days }) {
       </div>
       {salesOverTurn.map((item, index) =>
         item.id === compare() ? (
-          <div className='sales'>
+          <div className='sales' key={index}>
             <div className='sales-currency'>
               <div className='sales-total'>{item.total}</div>
               <div className='sales-percentage'>
