@@ -7,6 +7,7 @@ import 'moment/min/locales';
 import { ICONS } from '../../../configs';
 
 function PeriodFilter({ handleChange }) {
+  // eslint-disable-next-line
   const [days, setDays] = useState(7);
   const [fromDate, setFromDate] = useState(moment().subtract(7, 'days'));
   const [toDate, setToDate] = useState(moment().subtract(1, 'days'));
