@@ -178,3 +178,31 @@ export const bestSeller = [
     product: 'Makanan 15',
   },
 ];
+
+export const salesOverTurn = [
+  {
+    id: 1,
+    total: `2.100.000`,
+    percentage: 22.8,
+  },
+  {
+    id: 2,
+    total: `3.600.000`,
+    percentage: 13.8,
+  },
+  {
+    id: 3,
+    total: `600.000`,
+    percentage: 5.3,
+  },
+  {
+    id: 4,
+    total: `5.334.050`,
+    percentage: 26.5,
+  },
+  {
+    id: 5,
+    total: `8.600.000`,
+    percentage: 50.8,
+  },
+];

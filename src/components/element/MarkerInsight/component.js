@@ -26,7 +26,7 @@ function MarkerSight({ days }) {
       </div>
       {status && (
         <React.Fragment>
-          <Sales />
+          <Sales days={days} />
           <div className='wrapper-monitor'>
             <AverageChart />
             <CardSelling title='BEST SELLING SKU' days={days} />

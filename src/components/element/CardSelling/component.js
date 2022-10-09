@@ -17,6 +17,15 @@ function CardSelling({ title, days }) {
     }
   };
 
+  let sortData = [];
+  const sortingData = bestSeller.sort(
+    (a, b) => b.price * b.sold - a.price * a.sold
+  );
+  sortingData.map((item) => {
+    item.id === compare() && sortData.push(item);
+  });
+  const getFirstElement = sortData[0].price;
+
   return (
     <div className='card-wrapper'>
       <div className='card-head'>
@@ -29,10 +38,12 @@ function CardSelling({ title, days }) {
           item.id === compare() ? (
             <div
               key={index}
-              className={`card-bodys ${index === 0 && 'card-bodys__active'}`}
+              className={`card-bodys ${item.price === getFirstElement &&
+                'card-bodys__active'}`}
             >
               <img
-                className={`card-img ${index === 0 && 'card-img__active'}`}
+                className={`card-img ${item.price === getFirstElement &&
+                  'card-img__active'}`}
                 src={item.img}
                 alt='icon-product'
               />
